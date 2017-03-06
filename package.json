@@ -4,9 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "babel-node src",
-    "test": "eslint src && flow && jest --coverage",
-    "precommit": "yarn test",
-    "prepush": "yarn test"
+    "test": "eslint src && flow && jest --coverage"
+
   },
   "dependencies": {
     "color": "^1.0.3"
