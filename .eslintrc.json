@@ -8,7 +8,8 @@
   ],
   "rules": {
     "semi": [2, "never"],
-    "no-unexpected-multiline": 2
+    "no-unexpected-multiline": 2,
+    "import/no-extraneous-dependencies": [2, { "devDependencies": true }]
   },
   "env": {
       "jest": true
