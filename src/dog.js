@@ -1,5 +1,9 @@
+// @flow
+
 class Dog {
-  constructor(name) {
+  name: string
+
+  constructor(name: string) {
     this.name = name
   }
 
@@ -8,6 +12,5 @@ class Dog {
   }
 }
 
-// newer ES6 modules syntax, nodeJS doesnt natively support this so you know babel is working
 export default Dog
 // module.exports = Dog;

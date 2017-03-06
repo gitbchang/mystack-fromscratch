@@ -1,3 +1,4 @@
+// @flow
 /* eslint-disable no-console */
 
 // newer ES6 modules syntax, nodeJS doesnt natively support this so you know babel is working
