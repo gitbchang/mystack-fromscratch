@@ -12,6 +12,7 @@
     "import/no-extraneous-dependencies": [2, { "devDependencies": true }]
   },
   "env": {
+      "browser": true,
       "jest": true
   }
 }
