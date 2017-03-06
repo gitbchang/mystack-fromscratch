@@ -2,6 +2,6 @@
   "extends": "airbnb",
   "rules": {
     "semi": [2, "never"],
-    "no-unexpected-multiline": 2
+    "no-unexpected-multiline": 1
   }
 }
