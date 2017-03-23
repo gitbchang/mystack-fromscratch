@@ -5,8 +5,11 @@ import path from 'path'
 import { WDS_PORT } from './src/shared/config'
 import { isProd } from './src/shared/util'
 
+import webpack from 'webpack'
+
 export default {
   entry: [
+    'react-hot-loader/patch',
     './src/client',
   ],
   output: {
@@ -25,5 +28,12 @@ export default {
   },
   devServer: {
     port: WDS_PORT,
+    hot: true,
   },
+  plugins: [
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+  ],
 }

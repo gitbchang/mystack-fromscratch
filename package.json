@@ -19,7 +19,8 @@
     "color": "^1.0.3",
     "compression": "^1.6.2",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-hot-loader": "next"
   },
   "main": "index.js",
   "devDependencies": {
