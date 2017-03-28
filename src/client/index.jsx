@@ -1,4 +1,5 @@
-// eslint-disable-next-line global-require
+// @flow
+
 import 'babel-polyfill'
 
 import React from 'react'
@@ -16,8 +17,6 @@ const store = createStore(combineReducers({ hello: helloReducer }),
   // eslint-disable-next-line no-underscore-dangle
   isProd ? undefined : window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
-// ReactDOM.render(<App />, document.querySelector(APP_CONTAINER_SELECTOR))
-
 const rootEl = document.querySelector(APP_CONTAINER_SELECTOR)
 
 const wrapApp = (AppComponent, reduxStore) =>
@@ -27,14 +26,14 @@ const wrapApp = (AppComponent, reduxStore) =>
     </AppContainer>
   </Provider>
 
-ReactDOM.render(wrapApp(App), rootEl)
+ReactDOM.render(wrapApp(App, store), rootEl)
 
 if (module.hot) {
   // flow-disable-next-line
-  module.hot.accept('./app', () => {    
+  module.hot.accept('./app', () => {
+    // eslint-disable-next-line global-require
     const NextApp = require('./app').default
-    ReactDOM.render(wrapApp(NextApp), rootEl)
+    ReactDOM.render(wrapApp(NextApp, store), rootEl)
   })
 }
-
 
