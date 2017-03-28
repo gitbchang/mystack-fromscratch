@@ -1,15 +1,15 @@
 // @flow
 
 import React from 'react'
+import HelloButton from './container/hello-button'
+import Message from './container/message'
+import { APP_NAME } from '../shared/config'
 
-const App = () => <div>
-
-<h1>Hello React!</h1>
-
-<p>Hey It's me, your Brian</p>
-
-<p>What is React. New Info without reloading the page. Compile Webpack</p>
-
-</div>
+const App = () =>
+  <div>
+    <h1>{APP_NAME}</h1>
+    <Message />
+    <HelloButton />
+  </div>
 
 export default App
