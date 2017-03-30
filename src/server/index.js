@@ -10,7 +10,7 @@ import renderApp from './render-app'
 import { helloEndpointRoute } from '../shared/routes'
 
 const app = express()
-
+  
 app.use(compression())
 app.use(STATIC_PATH, express.static('dist'))
 app.use(STATIC_PATH, express.static('public'))
